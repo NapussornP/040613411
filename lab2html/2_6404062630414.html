@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>แบบฟอร์มจองทัวร์</title>
+        <style>
+            div{
+                padding: 10px;
+                outline: 2px solid black;
+                position: relative;
+                max-width: 400px;
+               
+            }
+            h3{
+                font-size: 20px;
+                background-color: white;
+                margin-top: -25px;
+                position: absolute;
+               
+            }
+           label{
+            font-size: 18px;
+           }
+           input{
+            font-size: 16px;
+           }
+            
+        </style>
+    </head>
+    <body>
+        <form method="get">
+            <h2>แบบฟอร์มจองทัวร์</h2><br>
+            <div class="form1">
+                <h3>ข้อมูลทั่วไป</h3><br>
+                
+                    <label for="name">ชื่อ-สกุล:</label><br>
+                    <input type="text" id="name" name="name" placeholder="กรอกชื่อ-สกุล" autofocus required> * <br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" title="..." title="aa" required> * <br><br>
+
+                    <label for="phone">โทรศัพท์:</label><br>
+                    <input type="tel" id="phone" name="phone" value="+66" pattern="0\d{9}" title="Please correct the format ex. 0669999999" required> * <br><br>
+
+                    <label for="addr">ที่อยู่:</label><br>
+                    <textarea name="addr" cols="40" rows="5"></textarea><br><br>
+
+                    <label for="post">รหัสไปรษณีย์: </label>
+                    <input type="text" id="post" name="post" size="6" pattern="\d{5}" title="Please correct the format ex. 12000"><br><br>
+
+                    <label for="img">รูปผู้จอง: </label>
+                    <input type="file" id="myfile">
+
+                    <!-- <input type="submit" value="submit"> -->
+                
+            </div>
+
+            <br><br>
+            <div class="form2">
+            
+                    <h3>ข้อมูลเข้าสู่ระบบ</h3><br>
+
+                    <label for="username">Username: </label><br>
+                    <input type="text" id="username" name="username" pattern="\w{8,}"><br>
+                    <i>ประกอบด้วย ตัวเลข ตัวอักษร หรือ _ ตั้งแต่ 8 ตัวขึ้นไป</i><br><br>
+
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" pattern=".{8,}"><br>
+                    <i>ประกอบด้วยอักขระอะไรก็ได้ตั้งแต่ 8 ตัวขึ้นไป</i>
+                
+            </div>
+
+            <br><br>
+            <div class="form3">
+                <h3>ข้อมูลทัวร์ที่ต้องการ</h3><br>
+                <label for="package">แพ็คเก็จทัวร์: 
+                    <select name="country" style="font-size: 15px;">
+                        <option value="U.K.">U.K.</option>
+                        <option value="Italy">Italy</option>
+                        <option value="France">France</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Turkey">Turkey</option>
+                    </select>
+                </label><br><br>
+                
+                <lable for="travel-day">วันเดินทาง: </lable>
+                <input type="date" name="TDay"><br><br>
+
+                <label for="No-people">จำนวนผู้เดินทาง: </label>
+                <input type="text" id="No-people" name="No-people" pattern="[1-9]|10" size="5"><br><br>
+
+                <label>เน้นการท่องเที่ยวแบบใด?<br>
+                    <input type="checkbox" name="goal" value="shopping">ชอปปิ้ง<br>
+                    <input type="checkbox" name="goal" value="nature">ธรรมชาติ<br>
+                    <input type="checkbox" name="goal" value="sea">ทะเล
+                </label><br><br>
+                
+            </div> <br><br>
+
+            
+                <label>ยอมรับเงื่อนไขและข้อตกลง:
+                    <input type="radio" name="agreement" value="agree" checked="checked">I agree
+                    <input type="radio" name="agreement" value="disagree"> I disagree
+                    <input type="submit" value="จอง" style="margin-left: 10px;">
+                </label>
+        
+        </form>
+        
+        
+    </body>
+</html>

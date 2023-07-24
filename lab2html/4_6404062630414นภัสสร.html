@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab2_4</title>
+        <style>
+            input{
+                font-size: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="../form-echo.php" method="get" style="font-size: 20px;">
+            USERNAME:
+            <input type="text" name="username" placeholder="Username">
+            <p><label>สาขาวิชา: </label>
+                <select name="dept">
+                    <option value="">--Please choose an option--</option>
+                    <option value="CS">CS</option>
+                    <option value="IC">IC</option>
+                    <option value="MA">MA</option>
+                    <option value="IMI">IMI</option>
+                    <option value="AS">AS</option>
+                    <option value="AFET">AFET</option>
+                </select>
+            </p>
+            <p>
+                FULL NAME:
+                <input type="text" name="full-name" placeholder="enter your full-name" pattern="[A-Z \s]{1,}" title="Please enter your name is upper case">
+            </p>
+
+            <p>
+                รหัสนักศึกษา:
+                <input  type="text" name="studentID" placeholder="Student ID" pattern="\d{2}-\d{6}-\d{4}-\d{1}"
+                        title="Please enter your Student ID as xx-xxxxxx-xxxx-x">
+            </p>
+
+            <p>
+                บ้านเลขที่:
+                <input type="text" name="addrNo" placeholder="Addrees NO." pattern="(\d+/\d+)|(\d+)" title="Please enter your address as 235/4 or 69">
+            </p>
+
+            <p>
+                รหัสสินค้า:
+                <input type="text" name="productID" placeholder="Product ID" pattern="[A-Z]{3}\d{2}" title="Please enter Product ID as AAA89">
+            </p>
+            <!-- \u0E00-\u0E7F -->
+            <p>
+                ชื่อ-สกุล(ภาษาไทย):
+            <input type="text" name="thainame" placeholder="ชื่อ-สกุล" pattern="[\u0E01-\u0E4C\s]+" title="Please enter your name only in Thai">
+            </p>
+            <p><input type="submit" value="submit"></p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab2_1</title>
+        <style>
+            input{
+                font-size: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <form method="get" style="font-size: 20px;">
+            1.ชื่อเต็ม/ย่อของสาขาวิชา:
+            <input type="text" name="major" placeholder="Major" pattern="[A-Z a-z]+">
+
+                <br><br>
+                2.จำนวนเงินที่จะโอน:
+                <input type="number" name="money" step="0.01" min="0" placeholder="Money">
+                
+                <br><br>
+                3.อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย:
+                <ol type="3">
+                    <li style="margin-bottom: 10px;"><input type="text" name="food1"></li>
+                    <li style="margin-bottom: 10px;"> <input type="text" name="food2"></li>
+                    <li style="margin-bottom: 10px;"><input type="text" name="food3"></li>
+                    <li style="margin-bottom: 10px;"><input type="text" name="food4"></li>
+                    <li style="margin-bottom: 10px;"><input type="text" name="food5"></li>
+                </ol>
+              
+                <br>
+                4.ค่าไฟฟ้า 3 เดือนที่ผ่านมา:
+                เดือนที่ 1 <input type="month" name="m1" style="width: 150px; margin-right: 20px;">
+                ค่าไฟ(บาท): <input type="number" name="total1" step="0.01" min="0" style="width: 100px;"><br>
+
+                <p style="margin-left: 230px;">
+                    เดือนที่ 2 
+                    <input type="month" name="m2" style="width: 150px; margin-right: 20px;">
+                    ค่าไฟ(บาท): 
+                    <input type="number" name="total2" step="0.01" min="0" style="width: 100px;">
+                </p>
+
+                <p style="margin-left: 230px;">
+                    เดือนที่ 3 
+                    <input type="month" name="m3" style="width: 150px; margin-right: 20px;">
+                    ค่าไฟ(บาท): 
+                    <input type="number" name="total3" step="0.01" min="0" style="width: 100px;">
+                </p>
+               
+
+                5.รหัสบัตรประชาชน:
+                <input type="text" name="id" placeholder="ID No." pattern="[1-9]\d{12}">
+
+                <br><br>
+               <label>
+                    6.ความพึงพอใจของหนังสือเล่มนี้:
+                    <input type="radio" name="fav" checked="checked">พึงพอใจมาก
+                    <input type="radio" name="fav">พึงพอใจปานกลาง
+                    <input type="radio" name="fav">พึงพอใจน้อย
+               </label>
+
+               <!-- <br><br>
+               <input type="" -->
+
+               <br><br>
+               <label>
+                    7.ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่:
+                    <input type="radio" name="vaccine" checked="checked">ได้รับ
+                    <input type="radio" name="vaccine">ไม่ได้รับ
+               </label>
+               <br><br>
+
+               8.อาการป่วย: <br>
+               <textarea name="paint" cols="45" rows="5"></textarea>
+
+               <br><br>
+               9.รหัสผ่าน:
+               <input type="password" name="password" placeholder="Password">
+
+               <br><br>
+               <label>
+                    10.เวลาเริ่มเข้าเรียน:
+                    <input type="time"  name="start-time" value="09:00">
+                    เวลาสิ้นสุดการเรียน:
+                    <input type="time"  name="end-time" value="12:00">
+               </label>
+               <br><br>
+               <label>
+                11.วันเวลานัดพบแพทย์:
+                <input type="datetime-local" name="appointment">
+                
+               </label>
+               <!-- <input type="submit" value="submit"> -->
+
+
+        </form>
+
+    </body>
+</html>

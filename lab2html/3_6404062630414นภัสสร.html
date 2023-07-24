@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Form Exercise</title>
+    </head>
+    <style>
+        table,td,th{
+            border: 1px solid black;
+            font-size: 20px;
+            
+        }
+        input{
+            font-size: 20px;
+        }
+    </style>
+    <body>
+        <h1>เข้าสู่ระบบ</h1>
+        <form name="myform" method="post" onclick=" return validationForm()" action="3_Logout.html">
+            <table>
+                <tr>
+                    <th>Username:</th>
+                    <td>
+                        <input type="text" id="username" name="username" autofocus required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Password:</th>
+                    <td>
+                        <input type="password" id="password" name="password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="text-align: left;">กรุณาพิมพ์ตามตัวเลขที่ปรากฎ:<br>1559<br>
+                        <input type="text" id="confirm" name="confirm" pattern="1559" title="Please enter 1559" required>
+                    </th>
+                    
+                </tr>
+            </table>
+            <br><br>
+            <input type="image" src="img/login.png" alt="Submit" width="90px">
+        </form>
+
+        <!-- <script>
+             function validationForm(){
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                var confirm = document.getElementById('confirm').value
+                if(username == '' || password == '' || confirm == ''){
+                    alert('Please complete the information.');
+                    return false;
+                }
+                return true;
+             }
+        </script> -->
+       
+    </body>
+</html>
