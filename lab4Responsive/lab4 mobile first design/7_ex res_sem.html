@@ -1,0 +1,65 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<style>
+		nav {
+			background-color: black;
+			color: white;
+			text-align: center;
+			
+		}
+		article {
+			background-color: gainsboro;
+			
+		}
+		aside {
+			background-color: cornflowerblue;
+			
+		}
+		
+
+        @media screen and (min-width: 481px) {
+            section{
+                display: flex;
+                font-size: 1em;
+            }
+            nav{
+                width: 30%;
+            }
+            article{
+                width: 60%;
+            }
+            aside{
+                width: 10%;
+            }
+        }
+		@media screen and (max-width: 480px)
+        {
+			section
+            { 
+                display: block;
+                font-size: 1.5em ; 
+            }
+			nav { width: auto; }
+			article { width: auto; }
+			aside { width: auto; }
+		}
+	</style>
+</head>
+<body>
+	
+    <section>
+        <nav>
+            Menu1
+            <br>Menu2
+            <br>Menu3
+        </nav>
+        <article>In publishing, art, and communication, … as speech, writing or any of various arts".</article>
+        <aside>
+            advertising
+            <br>advertising
+            <br>advertising
+        </aside>
+    </section>
+</body>
+</html>

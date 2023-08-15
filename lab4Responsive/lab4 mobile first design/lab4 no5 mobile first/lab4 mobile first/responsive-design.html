@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        
+        .botton{         
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            padding: 0.5em 0.5em;
+            position: relative;
+               
+        }      
+        .botton::before{
+            font-family: FontAwesome;
+            content: "\f217";
+            margin-right: 0.5em;
+        }  
+            
+        @media screen and (max-width: 480px){
+            .content{
+                background-color: lightgray;
+                margin: 10px;
+                padding: 10px;
+                font-size: 1em;
+            }                      
+        }
+
+        @media screen and (min-width: 481px) {
+            .flexible{
+                display: flex;
+            }
+            .content{
+                background-color: lightgray;
+                margin: 10px;
+                padding: 10px;
+                font-size: 2em;
+            }
+            .botton{
+                width: 7em;
+                font-size: 0.5em;
+                margin: auto;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexible">
+        
+		<div class="product">
+            <img src="imgs/clock.jpg">
+        </div>
+
+        <div class="content">
+            Garmin Instinct, Rugged Outdoor Watch with GPS, 
+            Features GLONASS and Galileo, Heart Rate Monitoring and
+            3-axis Compass, Tundra<br><br>
+            <div class="wrap">
+                <a href="">
+                    <div class="botton">Add to cart</div>
+                    
+                </a>
+            </div>
+		</div>
+
+    </div>
+
+</body>
+</html>
