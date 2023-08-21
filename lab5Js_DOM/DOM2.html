@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body, input{
+                font-size: 20px;
+            }
+        </style>
+        <script>
+            function greenText(inputElement){
+                inputElement.style.color = "green";
+                // document.getElementById("age").style.color = "green";
+                // document.getElementById("birth").style.color = "green";
+            }
+        </script>
+    </head>
+
+    <body>
+        Name: <input type="text" id="name" autofocus onblur="greenText(this)"><br>
+        Age: <input type="text" id="age" onblur="greenText(this)"><br>
+        Birthdate: <input type="text" id="birth" onblur="greenText(this)">
+    </body>
+</html>

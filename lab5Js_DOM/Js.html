@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let student = [
+                {
+                    fullname: 'นายตั้งใจ เรียนมาก',
+                    age: 18,
+                    year: 1,
+                    gpa: 3.40,
+                    help: true
+                },
+                {
+                    fullname: 'นายส่งงาน ตลอดมา',
+                    age: 19,
+                    year: 2,
+                    gpa: 3.00,
+                    help: false   
+                },
+                {
+                    fullname: 'นายใส่ใจ ดีงาม',
+                    age: 20,
+                    year: 3,
+                    gpa: 2.90,
+                    help: true
+                },
+                {
+                    fullname: 'นายเอ บี',
+                    age: 21,
+                    year: 4,
+                    gpa: 2.70,
+                    help: true
+                },
+                {
+                    fullname: 'นายไก่ ไข่',
+                    age: 18,
+                    year: 1,
+                    gpa: 3.20,
+                    help: false
+                },
+                {
+                    fullname: 'นายใจ รัก',
+                    age: 21,
+                    year: 4,
+                    gpa: 3.90,
+                    help: false
+                },
+                {
+                    fullname: 'นายเจ เจ',
+                    age: 21,
+                    year: 4,
+                    gpa: 2.75,
+                    help: true
+                }
+
+            ]
+
+           
+            let date = new Date();
+            let year = date.getFullYear();
+            year += 543;
+            
+
+            // console.log(n)
+            function checkYesorNo(student)
+            {
+                if(student.year == 1)
+                {
+                    if(student.gpa >= 3.20 && student.help == true)
+                    {
+                        return "ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย";
+                    }
+                    else if(student.gpa >= 3.20 && student.help == false)
+                    {
+                        return "ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์";
+                    }
+                    else if(student.help == true)
+                    {
+                        return "ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์";
+                    }
+                    else
+                    {
+                        return "ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ และยังไม่ได้ช่วยงานภาควิชา";
+                    }
+                }
+                else
+                {
+                    if(student.gpa >= 3.20)
+                    {
+                        return "ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์";
+                    }
+                    else if(student.gpa >= 2.75 && student.help == true)
+                    {
+                        return "ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย";
+
+                    }
+                    else if(student.help == true)
+                    {
+                        return "ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์";
+                    }
+                    else
+                    {
+                        return "ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ และยังไม่ได้ช่วยงานภาควิชา";
+                    }
+                }
+            }
+
+            for(var i = 0; i < student.length;i++)
+            {
+                console.log(student[i].fullname+" เกิดเมื่อปี "+(year-student[i].age)+" "+checkYesorNo(student[i]));
+            }
+
+
+
+
+            
+            student.sort((a, b) => a.year - b.year);
+            let count = 0
+            
+            function checkScholarship(student)
+            {
+                if(student.year == 1)
+                {
+                    if(student.gpa >= 3.20)
+                    {
+                        if(student.help == true)
+                       {
+                            count++;
+                            console.log(student.fullname+" เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย");
+                       }
+                       else if(student.help == false)
+                       {
+                            count++;
+                            console.log(student.fullname+" เนื่องจากเกรดเฉลี่ยถึงเกณฑ์");
+                       }
+                       else
+                       {
+                           
+                            
+                            
+                       }
+                    }
+                }
+                else
+                {
+                    if(student.gpa >= 3.20)
+                    {
+                        count++;
+                        console.log(student.fullname+" เนื่องจากเกรดเฉลี่ยถึงเกณฑ์");
+                    }
+                    else if(student.gpa >= 2.75 && student.help == true)
+                    {
+                        count++;
+                        console.log(student.fullname+" เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย");
+
+                    }
+                    else
+                    {
+                       
+                    }
+                }
+                
+            }
+            
+
+
+        //---------------------------------------------------สรุปตามชั้นปี-------------------------------------------------------------
+      
+            console.log("\n\nสรุปตามชั้นปี")
+            let j = 0;
+            while(j < student.length)
+            {
+                if(student[j].year == 1)
+                {
+                    console.log("ชั้นปีที่1")   
+                    while(student[j].year == 1)
+                    {
+                        checkScholarship(student[j]);
+                        j++;
+                    }
+                    if(count == 0)
+                    {
+                        console.log(" ไม่มี");
+                    }
+                                          
+                }
+                
+
+                //--------------------------Year 2-----------------------------------
+                else if(student[j].year == 2)
+                {
+                    count = 0;
+                    console.log("ชั้นปีที่ 2");
+                    while(student[j].year == 2)
+                    {
+                        checkScholarship(student[j]);
+                        j++;
+                    }
+                    if(count == 0)
+                    {
+                        console.log(" ไม่มี");
+                    }
+                    
+                }
+
+                //----------------------------Year 3--------------------------------
+
+                else if(student[j].year == 3)
+                {
+                    count = 0;
+                    console.log("ชั้นปีที่ 3");
+                     while(student[j].year == 3)
+                    {
+                        checkScholarship(student[j]);
+                        j++;
+                    }
+                    if(count == 0)
+                    {
+                        console.log(" ไม่มี");
+                    }
+                }
+
+                 //----------------------------Year 4--------------------------------
+                 else if(student[j].year == 4)
+                 {
+                    count = 0;
+                    console.log("ชั้นปีที่ 4");
+                     while(j < student.length && student[j].year == 4)
+                    {
+                        checkScholarship(student[j]);
+                        j++;
+                    }
+                    if(count == 0)
+                    {
+                        console.log(" ไม่มี");
+                    }
+                    
+                 }
+                
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

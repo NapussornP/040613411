@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            input[type="text"]{
+                width: 8em;
+                height: 1.5em;
+            }
+            select{
+                width: 3em;
+                height: 1.5em;
+                font-size: 1em;
+            }
+            
+        </style>
+        <script>
+            function cal(){
+                let num1_input = parseFloat(document.getElementById("num1").value);
+                let num2_input = parseFloat(document.getElementById("num2").value);
+                let res
+                let math = document.getElementById("math-symbol").value;
+
+                if(math == "plus")
+                {
+                    res = num1_input + num2_input;
+                }
+                else if(math == "minus")
+                {
+                    res = num1_input - num2_input;
+                }
+                else if(math == "mul")
+                {
+                    res = num1_input * num2_input;
+                }
+                else
+                {
+                    res = num1_input / num2_input;
+                    res = res.toFixed(3);
+                }
+
+                // console.log(res.toFixed(3));
+
+                document.getElementById("res").value = res;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="num1">
+        <select id="math-symbol">
+            <option value="plus" selected="selected">+</option>
+            <option value="minus">-</option>
+            <option value="mul">*</option>
+            <option value="division">/</option>
+        </select>
+        
+        <input type="text" id="num2">
+        = <input type="text" id="res" disabled>
+        <input type="submit" value="Compute" id="Compute" onclick="cal()">
+    </body>
+</html>

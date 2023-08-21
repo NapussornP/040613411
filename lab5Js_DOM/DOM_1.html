@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+
+            #errormsg.red-msg{
+                color: red;
+            }
+        </style>
+        <script>
+            function checkPassword(){
+                let pass1 = document.getElementById("pass1").value;
+                let pass2 = document.getElementById("pass2").value;
+                let show_msg = document.getElementById("errormsg");
+
+                let count = 0;
+                let n1 = pass1.length;
+                let n2 = pass2.length;
+
+                console.log("length: ",n1);
+                console.log("length: ",n2);
+
+                for(var i = 0; i < n1;i++)
+                {
+                    if(n1 == n2)
+                    {
+                        if(pass1[i] == pass2[i])
+                        {
+                            count++;
+                            console.log("str",i+': '+pass1[i])
+                        }
+                    }
+                }
+
+                if(count == n1)
+                {
+                    show_msg.innerHTML = "Correct";
+                    show_msg.classList.remove("red-msg")
+                }
+                else
+                {
+                    show_msg.innerHTML = "Incorrect";
+                    show_msg.classList.add("red-msg");
+                    //show_msg.style.color="red"
+                }
+                
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Register</h1>
+        Username: <input type="text" autofocus><br>
+        Password: <input type="text" id="pass1"><br>
+        RE-type Password: <input type="text" id="pass2"><br>
+        <input type="submit" onclick="checkPassword()">
+
+        <div id="errormsg"></div>
+    </body>
+</html>

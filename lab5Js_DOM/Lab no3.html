@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #p1{
+                font-size: 14px;
+            }
+        </style>
+        <script>
+            var size = 14;
+            
+            function decrease(){
+                size--;
+                document.getElementById("p1").style.fontSize = size + "px";
+            }
+
+            function increase(){
+                size++;
+                document.getElementById("p1").style.fontSize = size + "px"
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            <span onclick="decrease()">-</span> |
+            <span onclick="increase()">+</span>
+        </h1>
+        <p id="p1">
+            If you're Leavin, will you take me with you? 
+            I'm tried od talkin' on my phone 
+            There is one thing I can never give you My heart will never be your home
+        </p>
+    </body>
+</html>
