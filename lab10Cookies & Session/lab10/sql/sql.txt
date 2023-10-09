@@ -1,0 +1,11 @@
+SELECT orders.ord_id, orders.ord_date, `pname`, `price` FROM `product` 
+                            INNER JOIN item ON product.pid = item.pid
+                            INNER JOIN orders ON item.ord_id = orders.ord_id
+                            INNER JOIN member ON member.username = orders.username
+                            WHERE member.username = ? ;
+
+
+SELECT orders.username , COUNT(orders.ord_id) FROM orders
+INNER JOIN member
+ON member.username = orders.username
+GROUP BY member.username;
